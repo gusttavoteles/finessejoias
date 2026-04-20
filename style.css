@@ -56,6 +56,14 @@ a{
     font-size: 30px;
 }
 
+@media (min-width: 1024px){
+    .txt-apresentacao{font-size: 60px;}
+    .txtsec-apresentacao{font-size: 50px;}
+    .categorias-txt1{font-size: 25px;}
+    .categorias-txt2{font-size: 40px;}
+}
+
+
 .color-sec{
     color: rgb(184, 150, 90);
     font-style: italic;
@@ -193,17 +201,19 @@ a{
 
 .cards-categorias{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* auto-fit → o navegador decide quantas colunas cabem*/
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+    gap: 10px;
     padding: 20px;
     
 }   
+
+
 .card-cat{
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(212, 175, 55, 0.3); /* dourado suave */
-    height: 12rem;
+    height: 16rem;
     
     display: flex;
     align-items: center;
