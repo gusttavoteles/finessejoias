@@ -14,6 +14,94 @@ a{
     color: inherit; /* usa a cor do elemento pai */
 }
 
+/* ---------------------- nav lista ------------*/
+
+.logo{
+    height: 50px;
+    width: auto;
+}
+
+.logo img{
+    height: 3rem;   /* controla o tamanho */
+    width: auto;    /* mantém proporção */
+    display: block;
+    border-radius: 20px;
+}
+.nav-lista{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%; 
+    padding: 0px 20px 0px ;     
+
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+
+@media (min-width: 1024px){
+
+
+    .logo{
+    height: 90px;
+    width: auto;
+}
+
+.logo img{
+    height: 5rem;   /* controla o tamanho */
+    width: auto;    /* mantém proporção */
+    display: block;
+    border-radius: 20px;
+}
+    .nav-lista{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%; 
+    padding: 0px 20px 0px ;     
+
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+}
+
+
+
 .linha{
     height: 2px;
     width: 100px;
@@ -22,42 +110,13 @@ a{
 }
 
 
-.top{
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 30px;
-}
 
 .txt-princip{
   align-items: center;
   justify-content: center;  
 }
 
-.menu{
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  text-decoration: none;
-  
-}
 
-.menu li a{
-  text-decoration: none;
-  background-color: rgb(158, 160, 158);
-  color: white;
-  
-}
-
-.menu li a:hover {
-  color: #00c3ff;
-}
 
 .txt-apresentacao{
     color: white;
@@ -70,6 +129,8 @@ a{
     .txtsec-apresentacao{font-size: 50px;}
     .categorias-txt1{font-size: 25px;}
     .categorias-txt2{font-size: 40px;}
+
+
 }
 
 
@@ -153,6 +214,15 @@ a{
     
 
 }
+
+@media (min-width: 1024px){
+    .cards-carac{
+        justify-content: space-between;
+        font-size: large;
+    }
+}
+
+
 
 /* ********************* DESTAQUE SEMANAL ****************************** */
 
