@@ -60,7 +60,7 @@ a{
 }
 
 
-@media (min-width: 1024px){
+@media (min-width: 769px){
 
 
     .logo{
@@ -128,7 +128,7 @@ a{
     font-size: 30px;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 769px){
     .txt-apresentacao{font-size: 60px;}
     .txtsec-apresentacao{font-size: 50px;}
     .categorias-txt1{font-size: 25px;}
@@ -226,7 +226,7 @@ a{
 
 }
 
-@media (min-width: 1024px){
+@media (min-width: 769px){
     .cards-carac{
         justify-content: space-between;
         font-size: large;
@@ -270,7 +270,7 @@ a{
     border-radius: 20px;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 769px){
     .img2 img{
     height: 40rem;   /* controla o tamanho */
     width: auto;    /* mantém proporção */
@@ -350,7 +350,7 @@ a{
     color: rgb(216, 205, 205); 
 }
 
-@media (min-width: 1024px){
+@media (min-width: 769px){
     
 .card-cat{
     background: rgba(0, 0, 0, 0.4);
