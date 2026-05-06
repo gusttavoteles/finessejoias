@@ -5,6 +5,10 @@ background-color: rgb(15, 15, 15);
 font-family: 'Jost', sans-serif;
 font-weight: 300;
 }
+
+body{
+  background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -157,7 +161,9 @@ a{
     margin-left: 20px;
     gap: 5px;
     transition: transform 0.3s;
+    border-radius: 30px;
 }
+
 
 .btn-sobre{
     background-color:  rgb(15, 15, 15);
@@ -172,6 +178,11 @@ a{
     margin-left: 20px;
     gap: 5px;
     transition: transform 0.3s; 
+    border-radius: 30px;
+}
+
+.btn-colecao:hover{
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
 .btn-colecao:hover{
@@ -252,6 +263,26 @@ a{
 }
 
 
+.img2 img{
+    height: 15rem;   /* controla o tamanho */
+    width: auto;    /* mantém proporção */
+    display: block;
+    border-radius: 20px;
+}
+
+@media (min-width: 1024px){
+    .img2 img{
+    height: 40rem;   /* controla o tamanho */
+    width: auto;    /* mantém proporção */
+    display: flex;
+    border-radius: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+}
+
+
 
 
 
@@ -286,7 +317,7 @@ a{
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(212, 175, 55, 0.3); /* dourado suave */
-    height: 16rem;
+    height: 14rem;
     
     display: flex;
     align-items: center;
@@ -297,7 +328,17 @@ a{
     border-radius: 10px;
     transition: 0.3s;
 }
+.card-cat{
+    overflow: hidden; /* importante pra não vazar imagem */
+}
 
+.card-cat img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
 .cat-icon span{
     font-size: 42px;
     color: rgb(133, 124, 124); 
@@ -308,5 +349,43 @@ a{
     transform: scale(1.2);
     color: rgb(216, 205, 205); 
 }
+
+@media (min-width: 1024px){
+    
+.card-cat{
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3); /* dourado suave */
+    height: 40rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card-cat{
+    overflow: hidden; /* importante pra não vazar imagem */
+}
+
+.card-cat img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.cards-categorias{
+    grid-template-columns: repeat(4, 1fr); /* 4 cards lado a lado */
+    gap: 20px;
+  }
+
+}
+
 
 
