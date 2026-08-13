@@ -1,110 +1,888 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finesse Joias</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rouge+Script&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finesse — Joias em Prata 925</title>
+<meta name="description" content="Finesse — anéis, brincos, colares, pulseiras e coleção masculina em prata 925. Peças atemporais, feitas para durar.">
+
+<!-- Google Fonts: Cormorant Garamond (display) + Jost (corpo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
 </head>
-  <body>
+<body>
 
+<!-- =====================================================================
+     CABEÇALHO / NAVEGAÇÃO
+     ===================================================================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand" aria-label="Finesse — início">
+      <img src="images/logo-crop.jpg" alt="Finesse — Joias em Prata 925">
+    </a>
 
-      <header>
-        <nav class="nav-lista">
+    <nav class="nav-links" id="navLinks">
+      <a href="#aneis">Anéis</a>
+      <a href="#brincos">Brincos</a>
+      <a href="#colares">Colares</a>
+      <a href="#pulseiras">Pulseiras</a>
+      <a href="#masculina">Masculina</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
 
-          <div class="nav-container">
+    <div class="header-actions">
+      <a href="#" class="btn btn-ghost whatsapp-link" data-wa-general>
+        Fale conosco
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-            <div class="logo"><img src="img/logo-finesse.png" alt="Logo Finesse"></div>
+<!-- =====================================================================
+     HERO
+     ===================================================================== -->
+<section class="hero" id="inicio">
+  <div class="sparkles" aria-hidden="true">
+    <span style="top:18%; left:12%; animation-delay:.2s;"></span>
+    <span style="top:32%; left:44%; animation-delay:1.4s;"></span>
+    <span style="top:60%; left:8%;  animation-delay:.8s;"></span>
+    <span style="top:74%; left:30%; animation-delay:2.2s;"></span>
+    <span style="top:22%; left:70%; animation-delay:1.8s;"></span>
+    <span style="top:50%; left:85%; animation-delay:.5s;"></span>
+  </div>
 
-            <ul class="nav-menu">
-              <li> <a href="#sobrenos">Sobre nós</a></li>
-              <li> <a href="#categoria1">Nossa coleção</a></li>
-              <li> <a href="#avaliacao">Avaliação</a></li> <!--usar ID(nome da categoria) quando for puxar a categoria-->
-            </ul>
+  <div class="container hero-inner">
+    <div class="hero-copy reveal is-visible">
+      <span class="eyebrow">Prata 925 · Feito para durar</span>
+      <h1 class="hero-title">
+        <span class="line">Elegância que</span>
+        <span class="line">se usa <em>todos os dias.</em></span>
+      </h1>
+      <p class="hero-desc">
+        A Finesse cria joias em prata de lei para quem entende que sofisticação
+        está nos detalhes. Peças leves, atuais e com o brilho que acompanha
+        cada momento — do café da manhã ao jantar mais especial.
+      </p>
 
+      <div class="hero-actions">
+        <a href="#aneis" class="btn btn-gold">Ver coleção</a>
+        <a href="#" class="btn btn-ghost whatsapp-link" data-wa-general>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.96 6.45 17.5 2 12.04 2zm5.8 14.2c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.2.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.14.48.21.55.33.07.12.07.7-.17 1.38z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div>
+          <strong>925</strong>
+          <span>Prata de lei</span>
+        </div>
+        <div>
+          <strong>5</strong>
+          <span>Coleções</span>
+        </div>
+        <div>
+          <strong>+2k</strong>
+          <span>Clientes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal is-visible reveal-delay-1">
+      <div class="hero-frame">
+        <img src="images/aneis.jpg" alt="Modelo usando anéis Finesse em prata 925">
+      </div>
+      <div class="hero-badge">
+        <strong>✦</strong>
+        <span>Nova coleção</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#aneis" class="scroll-cue" aria-hidden="true">
+    <span>Explorar</span>
+    <span class="stick"></span>
+  </a>
+</section>
+
+<!-- Faixa contínua (marquee) -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Prata 925 certificada</span>
+    <span>Joias atemporais</span>
+    <span>Feito para durar</span>
+    <span>Envio para todo o Brasil</span>
+    <span>Prata 925 certificada</span>
+    <span>Joias atemporais</span>
+    <span>Feito para durar</span>
+    <span>Envio para todo o Brasil</span>
+  </div>
+</div>
+
+<!-- =====================================================================
+     COLEÇÕES
+     ===================================================================== -->
+<main class="collections">
+
+  <!-- ---------------- ANÉIS ---------------- -->
+  <section class="category" id="aneis">
+    <span class="category-node" aria-hidden="true"></span>
+    <div class="container category-grid">
+      <div class="category-media reveal">
+        <div class="media-frame">
+          <span class="corner-accent tl" aria-hidden="true"></span>
+          <span class="corner-accent br" aria-hidden="true"></span>
+          <img src="images/aneis.jpg" alt="Mãos com anéis Finesse em prata 925, empilhados e sobrepostos">
+        </div>
+      </div>
+      <div class="category-copy reveal reveal-delay-1">
+        <span class="index-label">Coleção</span>
+        <h2 class="section-title">Anéis</h2>
+        <p class="category-desc">
+          Do solitário discreto ao empilhado statement: nossos anéis são
+          pensados para se combinar entre si, criando composições únicas em
+          cada mão. Prata 925 com acabamento polido ou fosco.
+        </p>
+        <ul class="category-features">
+          <li>Ajuste sob medida</li>
+          <li>Zircônias lapidadas à mão</li>
+          <li>Garantia contra oxidação</li>
+        </ul>
+        <a href="#" class="btn btn-gold whatsapp-link" data-wa-product="Anéis">Comprar pelo WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Grade de produtos — substitua os placeholders pelas fotos reais -->
+    <div class="container">
+      <div class="product-grid">
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span><img src="/finesse-site/images/aneis/anel01-108.jpg" alt=""></span>
           </div>
-
-        </nav>
-      </header>
-
-      <div class="card-apresentacao">
-        <h4 class="categorias-txt1">Prata 925 legítima<div class="linha"></div></h4>
-        <div class="txt-apresentacao">A arte de usar <br><div class="color-sec">o que é eterno!</div></div>
-        <div class="txtsec-apresentacao">Joias em prata 925 selecionadas com critério. Cada peça carrega beleza, durabilidade e o brilho que não engana.</div>
-        <div class="btn-colecao"><a href="#categoria1">Ver coleção</a><span class="material-symbols-outlined">arrow_right_alt</span></div>
-        <div class="btn-sobre">Sobre a prata 925</div>
-      </div>
-
-      <div class="cards-carac">
-        
-        <div class="card-carac1"> 
-          <div class="cards-top">1k+</div>
-          Clientes <br>Satisfeitas</div>
-
-        <div class="card-carac2">
-          <div class="cards-top">+200</div>
-          Modelos <br>Disponíveis</div>
-
-        <div class="card-carac3">
-          <div class="cards-top">100%</div>
-          Prata 925 <br>Certificada</div>
-
-      </div>
-    
-
-      <div class="destaque-semana">
-        <h2 class="semana-txt">Destaque da Semana!</h2>
-        <h4 class="categorias-txt1">Peça em destaque<div class="linha"></div></h4>
-        <div class="txt-apresentacao">Anel Prata Rodinada <br><div class="color-sec">Classic Silver</div></div>
-        <div class="container-card-semana">
-          <div class="card-semana">
-            <div class="img2"><img src="img/img2.webp" alt=""></div>
-            <div>ESPECIFICAÇÃO PRATA</div>
-            <div>VALOR</div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
           </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span><img src="/finesse-site/images/aneis/anel02 - 132.jpg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span><img src="/finesse-site/images/aneis/anel03-120.jpg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span><img src="/finesse-site/images/aneis/anel0460.jpg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <!-- LOJISTA: troque este bloco por <img src="images/anel-solitario.jpg" alt="Anel Solitário"> -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><path d="M9 9l3-6 3 6"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Anel Solitário</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel Solitário">Comprar</a>
+          </div>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- BRINCOS ---------------- -->
+  <section class="category is-reversed" id="brincos">
+    <span class="category-node" aria-hidden="true"></span>
+    <div class="container category-grid">
+      <div class="category-media reveal">
+        <div class="media-frame">
+          <span class="corner-accent tl" aria-hidden="true"></span>
+          <span class="corner-accent br" aria-hidden="true"></span>
+          <img src="images/brincos.jpg" alt="Modelo usando brincos Finesse em diferentes furos da orelha">
         </div>
       </div>
-
-      <div class="categorias">
-        <h4 class="categorias-txt1">Navegue por categoria<div class="linha"></div>
-        </h4>
-        
-        <h3 class="categorias-txt2">O que você <br>está procurando?</h3>
+      <div class="category-copy reveal reveal-delay-1">
+        <span class="index-label">Coleção</span>
+        <h2 class="section-title">Brincos</h2>
+        <p class="category-desc">
+          De piercings delicados a argolas que assinam o visual, montamos
+          o "ear stack" perfeito para você — camada por camada, em prata 925
+          com banho anti-alérgico.
+        </p>
+        <ul class="category-features">
+          <li>Ideal para peles sensíveis</li>
+          <li>Argolas, brincos e piercings</li>
+          <li>Combine e monte seu stack</li>
+        </ul>
+        <a href="#" class="btn btn-gold whatsapp-link" data-wa-product="Brincos">Comprar pelo WhatsApp</a>
       </div>
+    </div>
+<!--ABA BRINCOS-->
+    <div class="container">
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.04 (1).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Brinco Argola Fina</h4>
+            <span class="price">R$ 99,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Argola Fina">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.04 (2).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Brinco Folheado Gota</h4>
+            <span class="price">R$ 119,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Folheado Gota">Comprar</a>
+          </div>
+        </article>
 
-      <div class="cards-categorias" id="categoria1">
+          <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.04 (3).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>BrincoTESTE Folheado Gota</h4>
+            <span class="price">R$ 119,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Folheado Gota">Comprar</a>
+          </div>
+        </article>
 
-        <div class="card-cat">
-          <img src="img/img-aneis.png" alt="">
-        </div>
+          <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.04 (4).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Brinco Folheado Gota</h4>
+            <span class="price">R$ 119,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Folheado Gota">Comprar</a>
+          </div>
+        </article>
 
-        <div class="card-cat">
-          <img src="img/img-colares.jpg" alt=""> 
-        </div>
 
-        <div class="card-cat">
-          <img src="img/img-pulseiras.jpg" alt="">
+          <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.04 (5).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Brinco Folheado Gota</h4>
+            <span class="price">R$ 119,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Folheado Gota">Comprar</a>
+          </div>
+        </article>
 
-        </div>
 
-        <div class="card-cat">
-          <img src="img/img-brincos.jpg" alt="">
+          <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.04.jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Brinco Folheado Gota</h4>
+            <span class="price">R$ 119,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Folheado Gota">Comprar</a>
+          </div>
+        </article>
 
-        </div>
-
+        <article class="product-card reveal reveal-delay-2">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.05 (1).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Piercing Cravejado</h4>
+            <span class="price">R$ 89,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Piercing Cravejado">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v6M8 11a4 4 0 0 0 8 0"/><circle cx="12" cy="16" r="4"/></svg>
+            <span><img src="/finesse-site/images/brincos/WhatsApp Image 2026-08-12 at 20.52.05.jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Brinco Pérola</h4>
+            <span class="price">R$ 109,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Brinco Pérola">Comprar</a>
+          </div>
+        </article>
       </div>
-      
-      <script src="script.js"></script>
+    </div>
+  </section>
+
+  <!-- ---------------- COLARES ---------------- -->
+  <section class="category" id="colares">
+    <span class="category-node" aria-hidden="true"></span>
+    <div class="container category-grid">
+      <div class="category-media reveal">
+        <div class="media-frame">
+          <span class="corner-accent tl" aria-hidden="true"></span>
+          <span class="corner-accent br" aria-hidden="true"></span>
+          <img src="images/colares.jpg" alt="Modelo usando colares Finesse em camadas, prata 925">
+        </div>
+      </div>
+      <div class="category-copy reveal reveal-delay-1">
+        <span class="index-label">Coleção</span>
+        <h2 class="section-title">Colares</h2>
+        <p class="category-desc">
+          Camadas que contam uma história. Correntes finas, pingentes
+          exclusivos e comprimentos pensados para se sobrepor com equilíbrio
+          — do colar choker ao mais longo.
+        </p>
+        <ul class="category-features">
+          <li>Correntes antialérgicas</li>
+          <li>Pingentes exclusivos Finesse</li>
+          <li>Diversos comprimentos</li>
+        </ul>
+        <a href="#" class="btn btn-gold whatsapp-link" data-wa-product="Colares">Comprar pelo WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (3).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Ponto de Luz</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Ponto de Luz">Comprar</a>
+          </div>
+        </article>
 
 
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (2).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Ponto de Luz</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Ponto de Luz">Comprar</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (2).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Ponto de Luz</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Ponto de Luz">Comprar</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (3).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Ponto de Luz</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Ponto de Luz">Comprar</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (4).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Ponto de Luz</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Ponto de Luz">Comprar</a>
+          </div>
+        </article>
 
 
-  </body>
+        <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (5).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Meia Lua</h4>
+            <span class="price">R$ 139,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Meia Lua">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal reveal-delay-2">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (6).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Coração</h4>
+            <span class="price">R$ 119,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Coração">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><circle cx="12" cy="16" r="2.4"/></svg>
+            <span><img src="/finesse-site/images/colar/WhatsApp Image 2026-08-12 at 20.50.19 (7).jpeg" alt=""></span>
+          </div>
+          <div class="product-info">
+            <h4>Colar Camadas Trio</h4>
+            <span class="price">R$ 189,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Colar Camadas Trio">Comprar</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- PULSEIRAS ---------------- -->
+  <section class="category is-reversed" id="pulseiras">
+    <span class="category-node" aria-hidden="true"></span>
+    <div class="container category-grid">
+      <div class="category-media reveal">
+        <div class="media-frame">
+          <span class="corner-accent tl" aria-hidden="true"></span>
+          <span class="corner-accent br" aria-hidden="true"></span>
+          <img src="images/pulseiras.jpg" alt="Modelo usando pulseiras Finesse empilhadas em prata 925 e dourado">
+        </div>
+      </div>
+      <div class="category-copy reveal reveal-delay-1">
+        <span class="index-label">Coleção</span>
+        <h2 class="section-title">Pulseiras</h2>
+        <p class="category-desc">
+          O pulso vira vitrine. Elos grossos, correntes finas e pulseiras
+          cravejadas se combinam em stacks que assinam seu estilo — leves
+          o suficiente para o dia a dia.
+        </p>
+        <ul class="category-features">
+          <li>Fecho reforçado</li>
+          <li>Prata 925 e banho dourado</li>
+          <li>Monte seu stack ideal</li>
+        </ul>
+        <a href="#" class="btn btn-gold whatsapp-link" data-wa-product="Pulseiras">Comprar pelo WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="16" height="5" rx="2.5"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Pulseira Elo Cubano</h4>
+            <span class="price">R$ 149,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Pulseira Elo Cubano">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="16" height="5" rx="2.5"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Pulseira Cravejada</h4>
+            <span class="price">R$ 159,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Pulseira Cravejada">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal reveal-delay-2">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="16" height="5" rx="2.5"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Pulseira Berloque</h4>
+            <span class="price">R$ 129,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Pulseira Berloque">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="16" height="5" rx="2.5"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Pulseira Tênis</h4>
+            <span class="price">R$ 199,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Pulseira Tênis">Comprar</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- MASCULINA ---------------- -->
+  <section class="category" id="masculina">
+    <span class="category-node" aria-hidden="true"></span>
+    <div class="container category-grid">
+      <div class="category-media reveal">
+        <div class="media-frame">
+          <span class="corner-accent tl" aria-hidden="true"></span>
+          <span class="corner-accent br" aria-hidden="true"></span>
+
+          <!--
+            LOJISTA: esta é uma ilustração criada no mesmo estilo visual
+            (fundo pêssego, dourado e a tipografia da marca) das demais fotos,
+            já que não recebemos uma foto para a coleção masculina.
+            Quando tiver uma foto de modelo/produto, basta substituir todo
+            este bloco <svg>...</svg> por:
+            <img src="images/masculina.jpg" alt="Coleção masculina Finesse">
+          -->
+          <svg viewBox="0 0 900 1125" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração da coleção masculina Finesse: anel, corrente e pulseira em prata sobre fundo pêssego">
+            <defs>
+              <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#fde3d3"/>
+                <stop offset="100%" stop-color="#fbcdb4"/>
+              </linearGradient>
+              <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#efd9a6"/>
+                <stop offset="50%" stop-color="#c9a24e"/>
+                <stop offset="100%" stop-color="#8a6a2f"/>
+              </linearGradient>
+              <linearGradient id="metalSoft" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f3e6c6"/>
+                <stop offset="100%" stop-color="#b8935f"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="900" height="1125" fill="url(#bgGrad)"/>
+            <rect width="900" height="1125" fill="url(#glow)"/>
+
+            <!-- silhueta de colarinho/lapela, ecoando o enquadramento das outras fotos -->
+            <path d="M120 1125 L120 880 Q450 760 780 880 L780 1125 Z" fill="#241f1c" opacity="0.9"/>
+            <path d="M330 905 L450 830 L570 905 L450 1125 Z" fill="#f6efe6" opacity="0.9"/>
+
+            <!-- corrente (naturezas mortas de joias) -->
+            <g fill="none" stroke="url(#metal)" stroke-width="10">
+              <ellipse cx="330" cy="330" rx="46" ry="30" transform="rotate(20 330 330)"/>
+              <ellipse cx="400" cy="360" rx="46" ry="30" transform="rotate(-15 400 360)"/>
+              <ellipse cx="470" cy="330" rx="46" ry="30" transform="rotate(20 470 330)"/>
+              <ellipse cx="540" cy="360" rx="46" ry="30" transform="rotate(-15 540 360)"/>
+              <ellipse cx="610" cy="330" rx="46" ry="30" transform="rotate(20 610 330)"/>
+            </g>
+
+            <!-- anel de sinete central -->
+            <g transform="translate(450 560)">
+              <circle r="86" fill="none" stroke="url(#metal)" stroke-width="14"/>
+              <rect x="-58" y="-98" width="116" height="78" rx="14" fill="url(#metalSoft)" stroke="#8a6a2f" stroke-width="4"/>
+              <text x="0" y="-46" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="46" fill="#5c4326" font-weight="600">F</text>
+            </g>
+
+            <!-- pulseira elo grosso -->
+            <g transform="translate(450 800)" fill="none" stroke="url(#metal)" stroke-width="16" stroke-linecap="round">
+              <path d="M-230 0 Q-160 -46 -90 0 Q-20 -46 50 0 Q120 -46 190 0 Q220 -46 230 -70"/>
+            </g>
+
+            <!-- brilhos -->
+            <g fill="#fffdf8">
+              <path d="M690 250 l7 18 18 7 -18 7 -7 18 -7-18 -18-7 18-7z" opacity="0.9"/>
+              <path d="M210 470 l5 13 13 5 -13 5 -5 13 -5-13 -13-5 13-5z" opacity="0.7"/>
+              <path d="M660 620 l4 10 10 4 -10 4 -4 10 -4-10 -10-4 10-4z" opacity="0.6"/>
+            </g>
+
+            <!-- selo/label no rodapé, ecoando o padrão das outras artes -->
+            <text x="450" y="1080" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="72" letter-spacing="4" fill="#6e4a3b">MASCULINA</text>
+            <text x="620" y="1055" font-family="Cormorant Garamond, serif" font-size="34" fill="#c9a24e">✦</text>
+          </svg>
+        </div>
+      </div>
+      <div class="category-copy reveal reveal-delay-1">
+        <span class="index-label">Coleção</span>
+        <h2 class="section-title">Masculina</h2>
+        <p class="category-desc">
+          Peças de peso certo e presença discreta. Correntes robustas, anéis
+          de sinete e pulseiras em prata 925 para quem usa joia como
+          extensão de atitude, não de vaidade.
+        </p>
+        <ul class="category-features">
+          <li>Elos reforçados</li>
+          <li>Anéis de sinete personalizáveis</li>
+          <li>Acabamento fosco ou polido</li>
+        </ul>
+        <a href="#" class="btn btn-gold whatsapp-link" data-wa-product="Coleção Masculina">Comprar pelo WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="15" r="6"/><rect x="8" y="6" width="8" height="5" rx="1.5"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Anel de Sinete</h4>
+            <span class="price">R$ 189,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Anel de Sinete">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal reveal-delay-1">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><ellipse cx="9" cy="9" rx="4.2" ry="2.8" transform="rotate(20 9 9)"/><ellipse cx="15" cy="14" rx="4.2" ry="2.8" transform="rotate(-15 15 14)"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Corrente Cubana</h4>
+            <span class="price">R$ 249,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Corrente Cubana">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal reveal-delay-2">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="16" height="5" rx="2.5"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Pulseira Elo Grosso</h4>
+            <span class="price">R$ 179,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Pulseira Elo Grosso Masculina">Comprar</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 5c3 4 13 4 16 0"/><rect x="10" y="14" width="4" height="4" rx="0.6"/></svg>
+            <span>Foto do produto aqui</span>
+          </div>
+          <div class="product-info">
+            <h4>Corrente Pingente Placa</h4>
+            <span class="price">R$ 219,90</span>
+            <a href="#" class="btn btn-gold btn-buy whatsapp-link" data-wa-product="Corrente Pingente Placa">Comprar</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =====================================================================
+     SOBRE / CONFIANÇA
+     ===================================================================== -->
+<section class="trust" id="sobre">
+  <div class="container trust-inner">
+    <div class="trust-copy reveal">
+      <span class="eyebrow">Sobre a Finesse</span>
+      <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem);">Prata de verdade, <em>compromisso de sempre.</em></h2>
+      <p class="lede">
+        Nascemos da vontade de deixar a prata 925 mais presente no dia a dia.
+        Cada peça da Finesse passa por um controle rigoroso de qualidade —
+        do polimento ao empacotamento — para chegar até você pronta para
+        durar anos, não temporadas.
+      </p>
+    </div>
+
+    <div class="trust-badges reveal reveal-delay-1">
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 6 6.5 1-4.7 4.6L18 20l-6-3.4L6 20l1.2-6.4L2.5 9l6.5-1z"/></svg>
+        <div>
+          <h4>Prata 925 certificada</h4>
+          <p>Todas as peças com selo de qualidade e garantia contra oxidação.</p>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M3 11h18M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        <div>
+          <h4>Embalagem exclusiva</h4>
+          <p>Cada joia chega em caixa Finesse, pronta para presentear.</p>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 12l6 6L21 6"/></svg>
+        <div>
+          <h4>Compra segura</h4>
+          <p>Atendimento direto pelo WhatsApp, do pedido à entrega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     CTA FINAL
+     ===================================================================== -->
+<section class="cta">
+  <div class="container">
+    <span class="eyebrow">Fale com a gente</span>
+    <h2 class="reveal">Sua próxima peça favorita está a uma mensagem de distância.</h2>
+    <p class="lede reveal reveal-delay-1">
+      Conte pra gente o que procura — anel, colar, brinco ou uma pulseira
+      para presentear. Respondemos rapidinho pelo WhatsApp.
+    </p>
+    <div class="cta-actions reveal reveal-delay-2">
+      <a href="#" class="btn btn-gold whatsapp-link" data-wa-general>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.96 6.45 17.5 2 12.04 2zm5.8 14.2c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.2.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.14.48.21.55.33.07.12.07.7-.17 1.38z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a href="#aneis" class="btn btn-ghost">Ver todas as coleções</a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     RODAPÉ
+     ===================================================================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo-crop.jpg" alt="Finesse — Joias em Prata 925">
+      <p>Joias em prata 925 feitas para acompanhar sua rotina com elegância — do primeiro brilho ao para sempre.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram da Finesse">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="#" class="whatsapp-link" data-wa-general aria-label="Falar com a Finesse no WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.96 6.45 17.5 2 12.04 2zm5.8 14.2c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.2.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.14.48.21.55.33.07.12.07.7-.17 1.38z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Coleções</h5>
+      <ul>
+        <li><a href="#aneis">Anéis</a></li>
+        <li><a href="#brincos">Brincos</a></li>
+        <li><a href="#colares">Colares</a></li>
+        <li><a href="#pulseiras">Pulseiras</a></li>
+        <li><a href="#masculina">Masculina</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>A Finesse</h5>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#" class="whatsapp-link" data-wa-general>Fale conosco</a></li>
+        <li><a href="#">Trocas e devoluções</a></li>
+        <li><a href="#">Cuidados com a peça</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Atendimento</h5>
+      <ul>
+        <li>Seg. a sáb. · 9h às 19h</li>
+        <li>Goiânia — GO</li>
+        <li><a href="#" class="whatsapp-link" data-wa-general>(62) 00000-0000</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year"></span> Finesse Joias em Prata 925. Todos os direitos reservados.</span>
+    <span>Feito com <span class="spark">✦</span> prata 925.</span>
+  </div>
+</footer>
+
+<!-- Botão flutuante do WhatsApp -->
+<a href="#" class="whatsapp-float whatsapp-link" data-wa-general aria-label="Falar com a Finesse no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.96 6.45 17.5 2 12.04 2zm5.8 14.2c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.2.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.14.48.21.55.33.07.12.07.7-.17 1.38z"/></svg>
+  <span class="wa-text">Fale conosco</span>
+</a>
+
+<script src="js/script.js"></script>
+</body>
 </html>
